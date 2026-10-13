@@ -1,160 +1,52 @@
-# 🎮 Hangman Game
+# Hangman — Word Guessing Game
 
-A fun, interactive word-guessing game built using **HTML, CSS, and JavaScript**. Test your vocabulary and try to guess the hidden word before the hangman drawing is completed!
+A simple, browser-based Hangman game made with HTML, CSS, and JavaScript. No frameworks, installations, or internet connection required.
 
-## 📖 About the Game
+## Getting Started
 
-Hangman is a classic word-guessing game where players attempt to uncover a hidden word by guessing one letter at a time.
+1. Download and extract `hangman-game.zip`.
+2. Open the `hangman` folder.
+3. Double-click `index.html` to launch the game in your web browser.
 
-Each incorrect guess adds a new body part to the hangman drawing. You have **6 chances** to guess incorrectly before the game ends.
+Keep `index.html`, `style.css`, and `script.js` together in the same folder.
 
-Can you figure out the word before it's too late?
+## How to Play
 
-## 🚀 How to Start
+1. The game randomly chooses a secret word from a built-in collection of more than 300 words.
+2. Each blank on the screen represents a letter in the secret word.
+3. Guess a letter by **clicking or tapping** an on-screen A–Z key, or by **typing a letter** on your physical keyboard.
+4. If the letter is in the word, every occurrence of that letter is revealed. The on-screen key turns green.
+5. If the letter is not in the word, you lose one remaining guess. The on-screen key turns red, and another part of the hangman is drawn.
+6. You can make **up to six incorrect guesses**. The remaining guess count is displayed above the word.
+7. **Win** by revealing every letter before you run out of guesses. **Lose** when the sixth incorrect guess completes the hangman; the secret word is then revealed.
+8. Select **Play Again** at any time to start a new round with a different word.
 
-1. Download the `hangman-game.zip` file.
-2. Extract the ZIP file to a folder on your computer.
-3. Open the extracted folder.
-4. Double-click `index.html` to launch the game in your web browser.
-5. Start guessing letters and have fun!
+### Helpful Tips
 
-**Note:** No software installation or internet connection is required.
+- You cannot guess the same letter twice: used keys are disabled, and repeated physical-keyboard guesses are ignored.
+- Correct guesses do not reduce your remaining guesses.
+- Try common vowels like A, E, I, O, and U early in the round.
+- The game works on desktop and mobile screens.
 
-## 🕹️ How to Play
+## Files
 
-### Step 1: Start the Game
-When the game opens, a random word is selected from a built-in list of over 300 words.
+| File | Purpose |
+| --- | --- |
+| `index.html` | Game page structure and hangman SVG |
+| `style.css` | Layout, colors, responsive styling, and animations |
+| `script.js` | Word selection, guesses, game state, keyboard controls, and win/loss rules |
+| `README.md` | Instructions and game overview |
 
-The word appears as blank spaces representing its letters.
+## Requirements
 
-For example, if the hidden word is **APPLE**, you will see:
+A modern web browser such as Chrome, Firefox, Edge, or Safari. No server or additional software is needed.
 
-`_ _ _ _ _`
+## New features
 
-### Step 2: Guess a Letter
-Choose a letter using either:
+- **Wins and losses:** Completed games update the tally, which is saved in your browser so it remains after a refresh. Starting another round early does not count as a loss.
+- **Categories:** Choose a topic from the Word category dropdown to start a new round using words from that topic. Choose **All categories** to mix them.
+- **Winning popup:** After guessing the word, see the word, category, completion time, remaining wrong guesses out of six, and overall record.
+- **Share Result:** Use your device's share sheet where supported. Otherwise, the result is copied to the clipboard (or displayed for manual copying).
+- **Timer:** Starts when each new round begins and stops when you win or lose.
 
-- The on-screen A–Z keyboard.
-- Your computer's physical keyboard.
-
-### Step 3: Reveal the Hidden Word
-If your guessed letter is in the word, it will appear in its correct position.
-
-For example:
-
-Hidden word: `APPLE`
-
-Guess: `P`
-
-Result: `_ P P _ _`
-
-If the letter is incorrect, you lose one chance and a new part of the hangman figure appears.
-
-### Step 4: Watch Your Remaining Chances
-You have **6 incorrect guesses** available.
-
-Every incorrect guess reveals another part of the hangman:
-
-1. Head
-2. Body
-3. Left arm
-4. Right arm
-5. Left leg
-6. Right leg
-
-The game displays how many incorrect guesses you have remaining.
-
-### Step 5: Win or Lose
-
-🏆 **You Win!**
-
-If you successfully reveal every letter before using all 6 incorrect guesses, you win!
-
-A congratulatory message will appear.
-
-💀 **Game Over!**
-
-If you make 6 incorrect guesses, the hangman drawing is completed and the game ends.
-
-The correct word will be revealed so you can see what you missed.
-
-### Step 6: Play Again
-Click the **Play Again** button to start a fresh round with a new random word.
-
-Your previous guesses and the hangman drawing will reset automatically.
-
-## ⌨️ Game Controls
-
-| Action | Control |
-|---|---|
-| Guess a letter | Click an A–Z button |
-| Guess using keyboard | Press any letter A–Z |
-| Start a new round | Click Play Again |
-| View remaining attempts | Check the counter |
-
-**Tip:** Letters that have already been guessed become disabled. Correct guesses are highlighted in green, while incorrect guesses are highlighted in red.
-
-## ✨ Game Features
-
-- Over 300 built-in words.
-- Random word selection for every round.
-- Interactive on-screen alphabet keyboard.
-- Physical keyboard support.
-- Six incorrect guesses per round.
-- Hangman drawing that updates with each mistake.
-- Automatic win and loss detection.
-- Correct word revealed after losing.
-- Play Again button for unlimited rounds.
-- Responsive design for mobile, tablet, and desktop.
-- No external frameworks or libraries.
-- Works offline.
-
-## 📁 Project Structure
-
-```text
-hangman/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-
-**File Descriptions**
-
-- `index.html` — Contains the structure of the game interface.
-- `style.css` — Controls the visual appearance, colors, layout, and responsive styling.
-- `script.js` — Handles word selection, guesses, keyboard input, scoring, and game results.
-- `README.md` — Contains the game instructions and project information.
-
-## 🛠️ Technologies Used
-
-- **HTML5** — Game structure and SVG hangman illustration.
-- **CSS3** — Design, animations, and responsive layout.
-- **JavaScript (ES6)** — Game mechanics and user interactions.
-
-## 💡 Tips for Winning
-
-- Start by guessing common vowels such as A, E, I, O, and U.
-- Try frequently used consonants like R, S, T, L, and N.
-- Pay attention to the letters already revealed.
-- Look for common word patterns and endings.
-- Use your remaining chances wisely!
-
-## 🌐 Browser Compatibility
-
-The game works in modern web browsers, including:
-
-- Google Chrome
-- Mozilla Firefox
-- Microsoft Edge
-- Safari
-
-## 📜 License
-
-This project is available for personal, educational, and learning purposes.
-
-## 🎉 Enjoy the Game!
-
-Challenge yourself, improve your vocabulary, and see how many words you can guess correctly.
-
-**Good luck, and happy guessing! 🎯**
+The game is entirely local. No score or result is sent to a server by the game.

@@ -49,3 +49,24 @@ h1{margin:10px 0;font-size:clamp(2.4rem,7vw,3.5rem);letter-spacing:-2px}
 @media(max-width:480px){body{padding:16px 10px;align-items:flex-start}.game-header{margin-bottom:18px}.game-card{padding:20px 12px;border-radius:16px}.drawing-container{width:180px}.keyboard{gap:5px}.key{height:39px;font-size:.82rem;border-radius:7px}.word-display{gap:5px}.letter-slot{width:25px;height:36px;font-size:1.05rem}}
 @media(max-width:340px){.keyboard{grid-template-columns:repeat(7,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* 9. Category selector and persistent record */
+.game-tools{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:0 0 14px;text-align:left}
+.scoreboard{display:flex;gap:10px}
+.score{display:flex;flex-direction:column;align-items:center;min-width:76px;padding:9px 16px;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--muted);font-size:.78rem}
+.score strong{font-size:1.5rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.score:last-child strong{color:var(--incorrect)}
+.category-label{display:flex;flex-direction:column;gap:5px;color:var(--muted);font-size:.8rem;font-weight:700;flex:1;max-width:240px}
+.category-label select{width:100%;padding:11px 30px 11px 10px;border:1px solid var(--border);border-radius:10px;background:var(--surface-light);color:var(--text);font:inherit;font-size:.95rem}
+.category-label select:focus-visible,.secondary-btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+/* 10. Accessible win popup */
+.win-dialog{width:min(420px,calc(100% - 28px));max-height:calc(100dvh - 32px);overflow:auto;border:1px solid var(--border);border-radius:20px;padding:0;background:var(--surface);color:var(--text);box-shadow:0 25px 90px #0009;text-align:center}
+.win-dialog::backdrop{background:#050a14c9;backdrop-filter:blur(5px)}
+.modal-content{padding:30px 22px}
+.trophy{font-size:3rem}
+.win-dialog h2{font-size:2rem;margin:10px 0;color:var(--accent)}
+.win-dialog p{line-height:1.65;color:var(--muted)}
+.modal-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.secondary-btn{border:1px solid var(--border);border-radius:11px;background:var(--surface-light);color:var(--text);font:inherit;font-weight:700;padding:13px 24px;cursor:pointer}
+.share-status{min-height:1.4em;font-size:.85rem;margin-bottom:0}
+@media(max-width:480px){.game-tools{flex-wrap:wrap}.category-label{max-width:none;min-width:130px}.score{min-width:63px;padding:8px 12px}}
